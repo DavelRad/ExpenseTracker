@@ -32,7 +32,7 @@ An intuitive expense tracker built using a modern tech stack, leveraging the pow
 
     ```
     git clone https://github.com/DavelRad/ExpenseTracker.git
-    cd expense-tracker
+    cd ExpenseTracker
     ```
 
 
