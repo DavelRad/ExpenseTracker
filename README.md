@@ -28,10 +28,10 @@ An intuitive expense tracker built using a modern tech stack, leveraging the pow
 
 
 
-1. **Clone the repository**: \
+1. **Clone the repository**: 
 
     ```
-    git clone &lt;repository-url>
+    git clone https://github.com/DavelRad/ExpenseTracker.git
     cd expense-tracker
     ```
 
@@ -40,7 +40,7 @@ An intuitive expense tracker built using a modern tech stack, leveraging the pow
     * Create a `.env` file in the root of the `backend` folder.
     * Add your MongoDB connection URL to the `.env` file: 
 `MONGO_URL=mongodb+srv://&lt;username>:&lt;password>@&lt;cluster-url>/&lt;dbname>?retryWrites=true&w=majority`
-3. **Install Dependencies and Start Backend**: \
+3. **Install Dependencies and Start Backend**: 
 
 
     ```
