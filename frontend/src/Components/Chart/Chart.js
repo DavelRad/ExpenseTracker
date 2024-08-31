@@ -48,16 +48,16 @@ function Chart() {
             {
                 label: 'Income',
                 data: incomeData,
-                backgroundColor: 'rgba(0, 128, 0, 0.2)', // Green with some transparency
-                borderColor: 'green',
+                backgroundColor: 'rgba(46, 204, 113, 0.2)',
+                borderColor: '#2ecc71',
                 fill: true,
                 tension: 0.3,
             },
             {
                 label: 'Expenses',
                 data: expenseData,
-                backgroundColor: 'rgba(255, 0, 0, 0.2)', // Red with some transparency
-                borderColor: 'red',
+                backgroundColor: 'rgba(231, 76, 60, 0.2)',
+                borderColor: '#e74c3c',
                 fill: true,
                 tension: 0.3,
             },
@@ -66,18 +66,25 @@ function Chart() {
 
     return (
         <ChartStyled>
+            <div className="chart-container">
             <Line data={data} />
+            </div>
         </ChartStyled>
     );
 }
 
 const ChartStyled = styled.div`
-    background: #FCF6F9;
-    border: 2px solid #FFFFFF;
+    background: var(--primary-color);
+    border: 2px solid var(--primary-color);
     box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
     padding: 1rem;
     border-radius: 20px;
     height: 100%;
+
+    .chart-container {
+        height: 100%;
+        width: 100%;
+    }
 `;
 
 export default Chart;

@@ -1,13 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-function Button({name, icon, onClick, bg, bPad, color, bRad}) {
+function Button({name, icon, onClick, bPad, bRad}) {
     return (
         <ButtonStyled style={{
-            background: bg,
             padding: bPad,
             borderRadius: bRad,
-            color: color,
         }} onClick={onClick}>
             {icon}
             {name}
@@ -16,6 +14,8 @@ function Button({name, icon, onClick, bg, bPad, color, bRad}) {
 }
 
 const ButtonStyled = styled.button`
+    background: var(--primary-color);
+    color: var(--text-light);
     outline: none;
     border: none;
     font-family: inherit;
@@ -26,6 +26,5 @@ const ButtonStyled = styled.button`
     cursor: pointer;
     transition: all .4s ease-in-out;
 `;
-
 
 export default Button

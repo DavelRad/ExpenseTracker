@@ -16,6 +16,18 @@ export const GlobalStyle = createGlobalStyle`
         --color-grey: #aaa;
         --color-accent: #F56692;
         --color-delete: #FF0000;
+        --primary-color: #1a1a2e;
+        --primary-color2: 'color: rgba(26, 26, 46, .6)';
+        --primary-color3: 'color: rgba(26, 26, 46, .4)';
+        --color-green: #2ecc71;
+        --color-grey: #555;
+        --color-accent: #e74c3c;
+        --color-delete: #c0392b;
+        --background-dark: #16213e;
+        --text-light: #f1f1f1;
+        --income-color: #2ecc71;
+        --expense-color: #e74c3c;
+        --balance-color: #3498db;
     }
 
     body{
@@ -23,6 +35,8 @@ export const GlobalStyle = createGlobalStyle`
         font-size: clamp(1rem, 1.5vw, 1.2rem);
         overflow: hidden;
         color: rgba(34, 34, 96, .6);
+        background-color: var(--background-dark);
+        color: var(--text-light);
     }
 
     h1, h2, h3, h4, h5, h6{
