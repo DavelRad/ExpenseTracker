@@ -2,6 +2,10 @@
 
 An intuitive expense tracker built using a modern tech stack, leveraging the power of React, Node.js, MongoDB, and REST API architecture.
 
+![Tracker Interface](./frontend/src/img/davel-avatar_inPixio.png)
+
+[Watch the demo on YouTube](https://www.youtube.com/watch?v=iybSPJ2coLY)
+
 
 ## **Features**
 

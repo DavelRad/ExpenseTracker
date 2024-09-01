@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react"
+import React, { useContext, useState,useEffect } from "react"
 import axios from 'axios'
 
 
@@ -12,6 +12,11 @@ export const GlobalProvider = ({children}) => {
     const [incomes, setIncomes] = useState([])
     const [expenses, setExpenses] = useState([])
     const [error, setError] = useState(null)
+
+    useEffect(() => {
+        getIncomes();
+    }, []); // Empty dependency array to call it only once on component mount
+    
 
     //calculate incomes
     const addIncome = async (income) => {
@@ -86,6 +91,15 @@ export const GlobalProvider = ({children}) => {
         return history.slice(0, 3)
     }
 
+    const allTransactionHistory = () => {
+        const history = [...incomes, ...expenses]
+        history.sort((a, b) => {
+            return new Date(b.createdAt) - new Date(a.createdAt)
+        })
+
+        return history
+    }
+
 
     return (
         <GlobalContext.Provider value={{
@@ -101,6 +115,7 @@ export const GlobalProvider = ({children}) => {
             totalExpenses,
             totalBalance,
             transactionHistory,
+            allTransactionHistory,
             error,
             setError
         }}>

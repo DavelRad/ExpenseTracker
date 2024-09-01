@@ -1,10 +1,11 @@
-import React, {useState, useMemo} from 'react'
+import React, {useState, useMemo, useEffect} from 'react'
 import styled from "styled-components";
 import bg from './img/bg.png'
 import {MainLayout} from './styles/Layouts'
 import Orb from './Components/Orb/Orb'
 import Navigation from './Components/Navigation/Navigation'
 import Dashboard from './Components/Dashboard/Dashboard';
+import Transaction from './Components/Transaction/Transaction';
 import Income from './Components/Income/Income'
 import Expenses from './Components/Expenses/Expenses';
 import { useGlobalContext } from './context/globalContext';
@@ -13,14 +14,16 @@ function App() {
   const [active, setActive] = useState(1)
 
   const global = useGlobalContext()
-  console.log(global);
+  useEffect(() => {
+    console.log(global);
+  }, []);
 
   const displayData = () => {
     switch(active){
       case 1:
         return <Dashboard />
       case 2:
-        return <Dashboard />
+        return <Transaction />
       case 3:
         return <Income />
       case 4: 
